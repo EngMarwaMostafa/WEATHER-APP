@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_baseline_location_on_24"
+            android:title="Manage Location" />
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/ToggleTemperature"
+            android:icon="@drawable/sun"
+            android:title="Temperature"
+            app:actionLayout="@layout/layout_toggle" />
+    </group>
+
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/LockScreen"
+            android:icon="@drawable/ic_baseline_lock_24"
+            android:title="Lock Screen"
+            app:actionLayout="@layout/layout_switch" />
+    </group>
+
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/Notification"
+            android:icon="@drawable/ic_baseline_notifications_none_24"
+            android:title="Notification"
+            app:actionLayout="@layout/layout_switch" />
+    </group>
+
+    <group
+        android:id="@+id/group6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/StatusBar"
+            android:icon="@drawable/celsius"
+            android:title="Status Bar"
+            app:actionLayout="@layout/layout_switch" />
+    </group>
+
+    <group
+        android:id="@+id/group7"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/HideBackgroundImage"
+            android:icon="@drawable/ic_baseline_hide_image_24"
+            android:title="Hide Background Image"
+            app:actionLayout="@layout/layout_switch" />
+    </group>
+
+    <group
+        android:id="@+id/group8"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/weatherRadar"
+            android:icon="@drawable/radar"
+            android:title="Weather Radar" />
+    </group>
+
+    <group
+        android:id="@+id/group9"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/weatherWidget"
+            android:icon="@drawable/ic_baseline_widgets_24"
+            android:title="Weather Widgets"
+            app:actionViewClass="android.widget.TextView" />
+    </group>
+</menu>
