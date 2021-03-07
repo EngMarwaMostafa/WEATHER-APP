@@ -35,7 +35,7 @@
         android:id="@+id/group4"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/LockScreen"
+            android:id="@+id/nav_LockScreen"
             android:icon="@drawable/ic_baseline_lock_24"
             android:title="Lock Screen"
             app:actionLayout="@layout/layout_switch" />
@@ -45,7 +45,7 @@
         android:id="@+id/group5"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/Notification"
+            android:id="@+id/nav_Notification"
             android:icon="@drawable/ic_baseline_notifications_none_24"
             android:title="Notification"
             app:actionLayout="@layout/layout_switch" />

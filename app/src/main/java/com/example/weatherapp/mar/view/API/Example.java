@@ -1,8 +1,9 @@
-package com.example.weatherapp.mar.data.model;
+package com.example.weatherapp.mar.view.API;
 
 import com.google.gson.annotations.SerializedName;
 
 public class Example {
+
     @SerializedName("main")
     private Main main;
 
@@ -15,4 +16,3 @@ public class Example {
         this.main = main;
     }
 }
-

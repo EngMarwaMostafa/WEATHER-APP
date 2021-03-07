@@ -1,115 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/back"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp30h"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/sp10"
+        android:layout_marginTop="@dimen/sp10"
+        android:layout_marginRight="@dimen/sp20"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/fragment_home_edt_locat"
-            android:layout_width="@dimen/dp180w"
-            android:layout_height="@dimen/dp30h" />
-
         <ImageView
-            android:id="@+id/fragment_home_iv_loc"
-            android:layout_width="@dimen/dp50w"
-            android:layout_height="@dimen/dp35h"
-            android:src="@drawable/locat"
-            android:padding="10dp"
-            android:layout_marginLeft="@dimen/dp50w"/>
+            android:id="@+id/dropdown_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/sp20"
+            android:src="@drawable/ic_baseline_menu_24" />
 
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
 
-        <RelativeLayout
-            android:layout_width="@dimen/dp300w"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp20h"
-            android:layout_marginLeft="@dimen/dp10w"
-            android:alpha=".6"
-          android:background="@color/black"
-            android:id="@+id/fragment_home_iv_data">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fragment_home_edt_locat"
+                    android:layout_width="@dimen/dp180w"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/purple_200"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/fragment_home_iv_loc"
+                    android:layout_width="@dimen/dp50w"
+                    android:layout_height="@dimen/dp35h"
+                    android:layout_marginLeft="@dimen/dp50w"
+                    android:padding="10dp"
+                    android:src="@drawable/locat" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_home_iv_data"
+                android:layout_width="@dimen/dp300w"
+                android:layout_height="@dimen/dp100h"
+                android:layout_marginLeft="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:alpha=".6"
+                android:background="@color/black">
+
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="time"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp10w"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dp200w"
+                    android:text="temp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_below="@id/fragment_home_tv_date"/>
+
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp100w"
+                    android:text="desc"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_below="@id/fragment_home_tv_temp"/>
+
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dp200w"
+                    android:text="Humidity"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_below="@id/fragment_home_tv_desc"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_home_iv_hourly"
+                android:layout_width="@dimen/dp300w"
+                android:layout_height="@dimen/dp100h"
+                android:layout_marginLeft="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:alpha=".6"
+                android:background="@color/black">
+
 
             <TextView
-                android:id="@+id/fragment_home_tv_date"
+                android:id="@+id/fragment_home_tv_24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="date"
+                android:padding="10dp"
+                android:text="24 hours next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"
                 android:textStyle="bold"
-                android:textSize="@dimen/sp30"
-                android:textColor="@color/white"
-                android:padding="20dp"/>
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
 
-            <TextView
-                android:id="@+id/fragment_home_tv_time"
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/fragment_home_iv_alerts"
+                android:layout_width="@dimen/dp300w"
                 android:layout_height="wrap_content"
-                android:text="time"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp20"
-                android:layout_below="@id/fragment_home_tv_date"
-                android:layout_marginStart="@dimen/dp30w"
-                android:layout_marginLeft="@dimen/dp20w" />
-
-            <TextView
-                android:id="@+id/fragment_home_tv_temp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:layout_centerInParent="true"
-                android:textSize="@dimen/sp20"
-                android:text="temp"
-                android:layout_marginLeft="@dimen/dp200w"/>
-
-            <TextView
-                android:id="@+id/fragment_home_tv_max"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/fragment_home_tv_temp"
-                android:layout_marginTop="@dimen/dp60h"
-                android:layout_marginBottom="@dimen/dp10h"
-                android:gravity="center_horizontal"
-                android:text="max:"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp20"
-                android:layout_marginLeft="@dimen/dp70w"/>
-
-            <TextView
-                android:id="@+id/fragment_home_tv_min"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="min:"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp20"
-                android:layout_below="@id/fragment_home_tv_temp"
-                android:layout_toRightOf="@id/fragment_home_tv_max"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="@dimen/dp60h"
-                android:layout_marginLeft="@dimen/dp50w"/>
-
-            <TextView
-                android:id="@+id/fragment_home_tv_wind"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wind:"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp20"
-                android:layout_below="@id/fragment_home_tv_max"
-                android:layout_toRightOf="@id/fragment_home_tv_max"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="@dimen/dp2h"
-                android:layout_marginLeft="@dimen/dp10w"/>
+                android:layout_marginLeft="@dimen/dp10w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:alpha=".6"
+                android:background="@color/black">
 
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/fragment_home_tv_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="sender: "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
 
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="event: "
+                    android:layout_below="@id/fragment_home_tv_sender"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="start: "
+                    android:layout_below="@id/fragment_home_tv_sender"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="@dimen/dp50w"/>
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="end: "
+                    android:layout_below="@id/fragment_home_tv_start"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp50w"/>
+
+                <TextView
+                    android:id="@+id/fragment_home_tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="description "
+                    android:layout_below="@id/fragment_home_tv_end"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_marginRight="@dimen/dp50w"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

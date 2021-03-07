@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ToggleButton
+        android:id="@+id/fragment_notification_toggle"
+        android:layout_width="@dimen/dp50w"
+        android:layout_height="@dimen/dp20h"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:background="@color/purple_200"
+        android:layout_marginTop="@dimen/dp15h"/>
+
+</LinearLayout>

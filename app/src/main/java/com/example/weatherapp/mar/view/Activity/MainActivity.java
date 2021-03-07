@@ -20,6 +20,8 @@ import com.example.weatherapp.R;
 
 import com.example.weatherapp.mar.view.Fragment.HomeFragment;
 import com.example.weatherapp.mar.view.Fragment.LocationFragment;
+import com.example.weatherapp.mar.view.Fragment.LockFragment;
+import com.example.weatherapp.mar.view.Fragment.NotificationFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -32,8 +34,8 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+      //  Toolbar toolbar = findViewById(R.id.toolbar);
+      //  setSupportActionBar(toolbar);
         setNavigationDrawer(); // call method
 
     }
@@ -52,6 +54,10 @@ public class MainActivity extends AppCompatActivity  {
                    // frag = new HomeFragment();
                 } else if (itemId == R.id.nav_location) {
                     frag = new LocationFragment();
+                }else if (itemId == R.id.nav_LockScreen) {
+                    frag = new LockFragment();
+                }else if(itemId == R.id.nav_Notification){
+                    frag = new NotificationFragment();
                 }
    // display a toast message with menu item's title
                 Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
